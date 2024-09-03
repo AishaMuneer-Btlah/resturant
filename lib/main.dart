@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resturant/home_page.dart';
+import 'package:resturant/mc_donalds.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(useMaterial3: false),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: McDonalds(),
     );
   }
 }

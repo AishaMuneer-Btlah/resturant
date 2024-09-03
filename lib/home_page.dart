@@ -87,6 +87,7 @@ class HomePage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        child: Text('  30%  ',style: TextStyle(color: Colors.white,fontSize: 10,backgroundColor: Colors.green[500]),),
                        ),
                       SizedBox(width: 20,),
                       Column(
@@ -101,13 +102,14 @@ class HomePage extends StatelessWidget {
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
-
-
+                          SizedBox(width: 7,),
+                          Icon(Icons.watch_later_outlined,size: 13,),
+                          Text('24',style: TextStyle(fontSize: 10),),
                         ],),
                       ],
                       crossAxisAlignment: CrossAxisAlignment.start,
                       ),
-                      SizedBox(width: 90,),
+                      SizedBox(width: 50,),
                       Icon(Icons.favorite,color: Colors.orange,)
 
                     ],) ,)
