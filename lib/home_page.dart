@@ -12,16 +12,16 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.only(left: 10),
+            padding: EdgeInsets.only(left: 30,top: 5),
             height: 170,width: 400,
             color: Colors.red,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-            Icon(Icons.arrow_back_ios_new,color: Colors.white,),
+            Icon(Icons.arrow_back_ios_new,color: Colors.white,size: 20,),
              SizedBox(height: 30,),
             Text('Mega Deal',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 17),),
-            SizedBox(height: 15,),
+            SizedBox(height: 10,),
             Text('Get mega',style: TextStyle(color: Colors.white,fontSize: 12),)
           ],),),
           SizedBox(height: 20,),
@@ -70,11 +70,15 @@ class HomePage extends StatelessWidget {
                     width: 300,height: 70,
                     child:Row( children: [
                       Container(
+                        height: 60,width: 90,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7),
                           color: Colors.red,
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/mac.jpg"),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        height: 60,width: 90,
                        ),
                       SizedBox(width: 20,),
                       Column(
@@ -88,7 +92,7 @@ class HomePage extends StatelessWidget {
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
-                           SizedBox(height: 5,),
+
 
                         ],),
                       ],),
