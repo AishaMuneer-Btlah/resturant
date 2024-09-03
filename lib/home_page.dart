@@ -7,6 +7,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var restNames =['MC Donalds','Starbucks','Dominos','Burger King','Burger King'];
+    var restpic   =['assets/images/mac.jpg','assets/images/starbucks.png','assets/images/dominos.png','assets/images/Burger-King.png','assets/images/Burger-King.png'];
+
     return  Scaffold(
       body: SingleChildScrollView(child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -14,7 +17,12 @@ class HomePage extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 30,top: 5),
             height: 170,width: 400,
-            color: Colors.red,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/pizza.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -40,7 +48,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                Icon(Icons.circle,color: Colors.white,),
+                Icon(Icons.info_outline,color: Colors.white,),
                 Text('Compaing Info',style: TextStyle(color: Colors.white),),
                 SizedBox(width: 65,),
                 Text('Back by click',style: TextStyle(color: Colors.white,fontSize: 10),),
@@ -75,7 +83,7 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(7),
                           color: Colors.red,
                           image: DecorationImage(
-                            image: AssetImage("assets/images/mac.jpg"),
+                            image: AssetImage(restpic[index]),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -83,9 +91,10 @@ class HomePage extends StatelessWidget {
                       SizedBox(width: 20,),
                       Column(
                         children: [
-                        Text('MC donalds',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                        Text('data',style: TextStyle(fontSize: 12,color: Colors.black87),),
-                         SizedBox(height: 20,),
+                        Text(restNames[index],style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        SizedBox(height: 2,),
+                        Text('For intersting time\n Order now !',style: TextStyle(fontSize: 9,color: Colors.black87),),
+                         SizedBox(height: 7,),
                          Row(children: [
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
                           Icon(Icons.star,color: Colors.yellowAccent,size: 15,),
@@ -95,7 +104,9 @@ class HomePage extends StatelessWidget {
 
 
                         ],),
-                      ],),
+                      ],
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      ),
                       SizedBox(width: 90,),
                       Icon(Icons.favorite,color: Colors.orange,)
 
