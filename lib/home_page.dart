@@ -35,8 +35,8 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 20,),
           Container(
             padding: EdgeInsets.all(10),
-           // decoration: BoxDecoration(
-           //   borderRadius: BorderRadius.circular(30),),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),),
             child: Column(children: [
             Center(child:  Container(
               padding: EdgeInsets.only(left: 7,),
